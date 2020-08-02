@@ -23,3 +23,4 @@ $all_names = $name . $name2; // $all-names = $name . $name2; 変数名にハイ�
 echo $all_names;
 ?>
 
+
