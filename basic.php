@@ -17,8 +17,9 @@ echo $name; // 変数に代入
 
 <?php
 $name = "Andy";
-$name2 = "Betty";
-$all_names = $name . $name2;
+// name = "Andy"; '$'がないので使用出来ない
+$name2 = "Betty";  // $2name = "Betty"; '$'の直後に数字を使うことが出来ない
+$all_names = $name . $name2; // $all-names = $name . $name2; 変数名にハイフンは使用出来ない
 echo $all_names;
 ?>
 
