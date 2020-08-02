@@ -22,5 +22,3 @@ $name2 = "Betty";  // $2name = "Betty"; '$'の直後に数字を使うことが�
 $all_names = $name . $name2; // $all-names = $name . $name2; 変数名にハイフンは使用出来ない
 echo $all_names;
 ?>
-
-
