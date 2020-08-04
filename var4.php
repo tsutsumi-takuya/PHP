@@ -21,7 +21,7 @@ echo "NAME:".$name;	// '$name'の表示
 echo "AGE:".$age;	// '$age'の表示
 ?>
 
-<?php
+<?php // 整数型(intger,int)
 $price = 1000;
 $discount = -100;
 echo "PRICE :" .$price;
@@ -40,5 +40,18 @@ echo ",";
 echo $c;
 echo ",";
 echo $d;
+?>
+
+<?php // 浮動小数点型(float,double)
+$price = 1000;
+$tax = 1.10;
+echo $price * $tax; // ２つの変数の掛け算
+?>
+
+<?php // 文字列型
+$name = "Andy";		// 文字列型は" "か' 'で囲む
+echo $name;
+$name2 = 'Betty';	// 文字列型は" "か' 'で囲む
+echo $name2;
 ?>
 
