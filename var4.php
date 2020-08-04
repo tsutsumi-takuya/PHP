@@ -55,3 +55,11 @@ $name2 = 'Betty';	// 文字列型は" "か' 'で囲む
 echo $name2;
 ?>
 
+<?php // 変数展開
+$name = "Andy";
+$message1 = 'Hello $name';	// ''で文字列として表示(埋め込みなし)
+echo $message1;
+$message2 = "Hello $name";	// " "で変数を埋め込んで表示
+echo $message2;
+?>
+
