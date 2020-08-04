@@ -63,3 +63,12 @@ $message2 = "Hello $name";	// " "で変数を埋め込んで表示
 echo $message2;
 ?>
 
+<?php // 論理型(boolean,bool)
+$name = "Andy";
+$student = true;	// 真偽は" "等はいらない
+echo $name;
+echo ",";
+echo $student;		// 論理データはecho命令で出力するとtrueの場合"1"、falseの場合" "(空文字)に変換されてしまう
+echo ",";
+var_dump($student);	// var_dump関数での表示を行う(変数の中のデータと型を確認)
+?>
