@@ -28,3 +28,17 @@ echo "PRICE :" .$price;
 echo "DISCOUNT :" .$discount;
 ?>
 
+<?php
+$a = 10;	// 10進数
+$b = 0b10;	// 2進数(先頭に'0b'を付与)
+$c = 010;	// 10進数(先頭に'0'を付与)
+$d = 0x10;	// 16進数(先頭に'0x'を付与)
+echo $a;
+echo ",";
+echo $b;
+echo ",";
+echo $c;
+echo ",";
+echo $d;
+?>
+
