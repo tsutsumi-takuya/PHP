@@ -21,3 +21,10 @@ echo "NAME:".$name;	// '$name'の表示
 echo "AGE:".$age;	// '$age'の表示
 ?>
 
+<?php
+$price = 1000;
+$discount = -100;
+echo "PRICE :" .$price;
+echo "DISCOUNT :" .$discount;
+?>
+
