@@ -108,3 +108,15 @@ $age = $age + 1; // $ageは20
 echo $age;		 // 20 + 1
 ?>
 
+<?php
+$age = 20;
+$age ++;	// インクリメント(加算子)
+echo $age;
+?>
+
+<?php
+$age = 20;
+$age --;	// デクリメント(減算子)
+echo $age;
+?>
+
