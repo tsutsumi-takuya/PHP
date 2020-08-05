@@ -72,3 +72,33 @@ echo $student;		// 論理データはecho命令で出力するとtrueの場合"1
 echo ",";
 var_dump($student);	// var_dump関数での表示を行う(変数の中のデータと型を確認)
 ?>
+
+<?php
+$price = 1000;
+$count = 10;
+$toptal_price = $price * $count;
+echo $toptal_price;
+?>
+
+<?php
+$x = 5;
+$y = 2;
+$z = $x + $y;	// 四則演算
+echo $z;
+echo ",";
+$z = $x - $y;	// 四則演算
+echo $z;
+echo ",";
+$z = $x * $y;	// 四則演算
+echo $z;
+echo ",";
+$z = $x / $y;	// 四則演算
+echo $z;
+echo ",";
+$z = $x % $y;	// 余り表示
+echo $z;
+echo ",";
+$z = $x ** $y;	// 累乗
+echo $z;
+?>
+
