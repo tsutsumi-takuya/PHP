@@ -102,3 +102,9 @@ $z = $x ** $y;	// 累乗
 echo $z;
 ?>
 
+<?php
+$age = 20;
+$age = $age + 1; // $ageは20
+echo $age;		 // 20 + 1
+?>
+
