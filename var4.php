@@ -120,3 +120,10 @@ $age --;	// デクリメント(減算子)
 echo $age;
 ?>
 
+<?php
+$message = "Hello ";
+$name = "Andy";
+$message = $message . $name; // 文字列演算子
+echo $message;
+?>
+
