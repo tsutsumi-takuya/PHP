@@ -127,10 +127,16 @@ $message = $message . $name; // 文字列演算子
 echo $message;
 ?>
 
-
 <?php
 $label = "AGE : ";
 $age = 20;
 echo $label . $age;
+?>
+
+<?php
+$name = "Andy";
+$name2 = "Betty";
+echo $name . PHP_EOL; // 改行コード
+echo $name2 . PHP_EOL; // 改行コード
 ?>
 
