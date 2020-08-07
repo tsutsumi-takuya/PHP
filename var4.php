@@ -127,3 +127,10 @@ $message = $message . $name; // 文字列演算子
 echo $message;
 ?>
 
+
+<?php
+$label = "AGE : ";
+$age = 20;
+echo $label . $age;
+?>
+
