@@ -153,3 +153,28 @@ $message .= "Andy";	// 複合代入演算子
 echo $message;
 ?>
 
+<?php
+$apple = 100;
+$banna = 200;
+$result = $apple > $banna;	// 比較演算時(大小)
+var_dump($result);	// bool(false)
+?>
+<?php
+$apple = 100;
+$banna = 200;
+$result = $apple < $banna;	// 比較演算時(大小)
+var_dump($result);	// bool(true)
+?>
+
+<?php
+$apple = 100;
+$banna = 200;
+$result = $apple == $banna;	// 比較演算時(等しい)
+var_dump($result);	// bool(false)
+?>
+<?php
+$apple = 100;
+$banna = 200;
+$result = $apple != $banna;	// 比較演算時(異なる)
+var_dump($result);	// bool(true)
+?>
