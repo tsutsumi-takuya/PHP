@@ -147,3 +147,9 @@ $price *= 1.10;	// 複合代入演算子($price * 1.10)
 echo $price;
 ?>
 
+<?php
+$message = "Hello";
+$message .= "Andy";	// 複合代入演算子
+echo $message;
+?>
+
