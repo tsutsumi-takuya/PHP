@@ -140,3 +140,10 @@ echo $name . PHP_EOL; // 改行コード
 echo $name2 . PHP_EOL; // 改行コード
 ?>
 
+<?php
+$price = 1000;	// 代入演算子
+$price += 500;	// 複合代入演算子($price + 500)
+$price *= 1.10;	// 複合代入演算子($price * 1.10)
+echo $price;
+?>
+
