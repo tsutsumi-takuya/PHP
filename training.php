@@ -32,3 +32,9 @@ echo "Hello ";
 echo $names[2];	// 配列変数の指定([インデックス])
 ?>
 
+<?php
+$names = ["Andy","Betty","Carol"];
+$count = count($names);	// count関数の使用(int型で返す)
+echo $count;	// $countの表示を行う
+?>
+
