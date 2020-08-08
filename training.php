@@ -51,3 +51,49 @@ $count = count($names);
 echo count($names);
 ?>
 
+<?php
+$names = ["Andy","Betty","Carol"];
+$names[1] = "Dave";	// 配列の要素の変更($name[1]"Betty" => $name[1]"Dave")
+echo $names[0];
+echo $names[1];
+echo $names[2];
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+$names[3] = "Dave";	// 配列の要素の変更($name[1]"Betty" => $name[1]"Dave")
+var_dump($names);	// $names[3]に"Dave"が自動追加される
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+$names[0] = $names[2];	// "Andy"に"Carol"の配列の代入を行う
+$names[2] = $names[0];	// "Andy"を出力したいが代入されている為、"Carol"が表示されてしまう
+var_dump($names);
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+$temp = $names[0];		// $name[0]を一度"$temp"に退避させる
+$names[0] = $names[2];	// 退避後、配列の変更を行う
+$names[2] = $temp;		// 退避していた"$temp"を代入
+var_dump($names);
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+$names[1] = "";	// 配列の要素数は変わらず""が代入されてしまう
+var_dump($names);
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+unset($names[1]);	// unset関数を使用し$names[1]を削除(※要素は削除できるが要素番号に空きが出てしまう)
+var_dump($names);
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+array_splice($names, 1, 1);	// array_splice関数(削除対象の配列,削除対象の要素番号,削除対象の要素数)を使用
+var_dump($names);
+?>
