@@ -38,3 +38,16 @@ $count = count($names);	// count関数の使用(int型で返す)
 echo $count;	// $countの表示を行う
 ?>
 
+<?php
+$names = [];
+$count = count($names);	// count関数の使用(int型で返す)
+echo $count;	// $countの表示を行う
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+$names[] = "Dave";	// 配列の追加($names[3]に代入される)
+$count = count($names);
+echo count($names);
+?>
+
