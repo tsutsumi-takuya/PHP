@@ -4,13 +4,21 @@ echo $message;
 ?>
 
 <?php
-$color = "Red";
-echo $color;
+$color1 = "Red";
+echo $color1;
 echo ",";
-$color = "Green";
-echo $color;
+$color2 = "Green";
+echo $color2;
 echo ",";
-$color = "Blue";
-echo $color;
+$color3 = "Blue";
+echo $color3;
+?>
+
+<?php
+$price = 100;
+$count = 3;
+$tax = 1.1;
+$total = $price * $count * $tax;
+echo $total;
 ?>
 
