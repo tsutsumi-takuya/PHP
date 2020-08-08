@@ -22,3 +22,13 @@ $total = $price * $count * $tax;
 echo $total;
 ?>
 
+<?php
+$names = ["Andy","Betty","Carol"];	// 配列
+echo "Hello ";
+echo $names[0];	// 配列変数の指定([インデックス])
+echo "Hello ";
+echo $names[1];	// 配列変数の指定([インデックス])
+echo "Hello ";
+echo $names[2];	// 配列変数の指定([インデックス])
+?>
+
