@@ -117,3 +117,19 @@ $colors = ["Red","Green","Blue"];
 array_splice($colors, 0, 1);
 var_dump($colors);
 ?>
+
+<?php
+$i = 0;
+while($i < 3){
+	echo $i . PHP_EOL;	// 改行コード(PHP_EOL)
+	$i++;
+}
+?>
+
+<?php
+$i = 0;
+while($i <= 0){
+	echo $i . PHP_EOL;
+	$i++;
+}
+?>
