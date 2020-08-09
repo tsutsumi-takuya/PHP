@@ -133,3 +133,19 @@ while($i <= 0){
 	$i++;
 }
 ?>
+
+<?php
+$i = 0;
+while($i > 5){
+	echo $i . PHP_EOL;	// 改行コード(PHP_EOL)
+	$i++;
+}
+?>
+
+<?php
+$i = 0;
+while(true){
+	echo $i . PHP_EOL;	// 改行コード(PHP_EOL)
+	$i++;
+}
+?>
