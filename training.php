@@ -97,3 +97,23 @@ $names = ["Andy","Betty","Carol"];
 array_splice($names, 1, 1);	// array_splice関数(削除対象の配列,削除対象の要素番号,削除対象の要素数)を使用
 var_dump($names);
 ?>
+
+<?php
+$points = [10,20,30];
+$total = $points[0]+$points[1]+$points[2];
+echo $total;
+?>
+
+<?php
+$colors = [];
+$colors[] = "Red";
+$colors[] = "Green";
+$colors[] = "Blue";
+var_dump($colors);
+?>
+
+<?php
+$colors = ["Red","Green","Blue"];
+array_splice($colors, 0, 1);
+var_dump($colors);
+?>
