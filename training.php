@@ -162,9 +162,66 @@ while($i < count($names)){	// 反復条件は'count関数'で設定も行える
 
 <?php
 $names = ["Andy","Betty","Carol"];
+$names[] = "Dave";
 for($i = 0; $i < count($names); $i++){ //(初期化処理; 反復条件; 増減処理)
 	echo "Hello ";
 	echo $names[$i] . PHP_EOL;
 }
+?>
+
+<?php // ネスト(入れ子)のループ
+for($i = 1; $i <= 9; $i++){
+	for($j = 1; $j <= 9; $j++){
+		echo $i * $j;
+		echo " ";
+	}
+	echo PHP_EOL;
+}
+?>
+
+<?php
+for($i = 0; $i < 10; $i++){
+	if($i == 5){
+		break;	// 反復処理の終了
+	}
+	echo $i .PHP_EOL;
+}
+echo "end" .PHP_EOL;
+?>
+
+<?php
+for($i = 0; $i < 10; $i++){
+	$x = $i % 2;
+	if($x == 1){
+		continue;	// 反復処理の続行
+	}
+	echo $i .PHP_EOL;
+}
+echo "end" .PHP_EOL;
+?>
+
+<?php
+$i = 1;
+while($i <= 9){
+	echo $i .PHP_EOL;
+	$i = $i + 2;
+}
+?>
+
+<?php
+$colors = ["Red","Green","Blue"];
+for($i = 0; $i < count($colors); $i++){
+	$no = $i + 1;
+	echo $no ." : " .$colors[$i] .PHP_EOL;
+}
+?>
+
+<?php
+$points = [10,20,30];
+$total = 0;
+for($i = 0; $i < count($points); $i++){
+	$total = $points[$i] + $total;
+}
+echo $total .PHP_EOL;
 ?>
 
