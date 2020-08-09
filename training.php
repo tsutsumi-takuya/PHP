@@ -143,9 +143,28 @@ while($i > 5){
 ?>
 
 <?php
-$i = 0;
-while(true){
-	echo $i . PHP_EOL;	// 改行コード(PHP_EOL)
+$i = 3;		// $i => カウンター変数の初期値を設定する
+while($i > 0){
+	echo $i . PHP_EOL;
+	$i--;	// $i => カウンター変数を増加(減少)する
+}
+?>
+
+<?php
+$names = ["Andy","Betty","Carol"];	// 配列の設定
+$i = 0;	// $i => カウンター変数の初期値を設定する
+while($i < count($names)){	// 反復条件は'count関数'で設定も行える
+	echo "Hello ";
+	echo $names[$i] . PHP_EOL;	// 配列($names)を要素番号($i)で出力
 	$i++;
 }
 ?>
+
+<?php
+$names = ["Andy","Betty","Carol"];
+for($i = 0; $i < count($names); $i++){ //(初期化処理; 反復条件; 増減処理)
+	echo "Hello ";
+	echo $names[$i] . PHP_EOL;
+}
+?>
+
