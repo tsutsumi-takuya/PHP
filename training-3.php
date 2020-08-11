@@ -87,3 +87,9 @@ for ($i = 0; $i < count($cities); $i++) {
 }
 ?>
 
+<?php
+$names = ["Andy","Betty","Carol"];
+$count = count($names);	// count関数(組み込み関数)の使用　※$変数 = 関数名(引数、引数)
+echo $count;
+?>
+
