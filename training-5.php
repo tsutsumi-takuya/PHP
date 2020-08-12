@@ -68,3 +68,34 @@ for ($i = 0; $i < count($names); $i++) {
 fclose($handle);
 ?>
 
+<?php
+$file = "hello.txt";
+$handle = @fopen($file, "r"); // エラー表示を削除する為に@をfopen関数の前に付ける(エラー制御演算子)
+if ($handle === false) {
+	die("can't open file" .PHP_EOL); // die関数 => プログラムを自動終了
+}
+while (($line = fgets($handle)) !== false) { // $fileをfalseになるまで表示させる
+	echo $line;
+}
+fclose($handle);
+?>
+
+<?php
+$file = "score.txt";
+$lines = file($file, FILE_IGNORE_NEW_LINES);
+$total = array_sum($lines);
+echo $total .PHP_EOL;
+
+$handle = fopen($file, "r"); // 変数handleにファイルポインタを読み込んで代入
+$line = fgets($handle);	// fgets関数を使用し、変数handleから1行のデータを読み込んで代入
+$scores = [];	// 配列データへの代入
+while ($line !== false) {
+	$scores[] = trim($line); // trim関数 => 改行コードや半角スペースやタブ文字を削除する
+	$line = fgets($handle);  // 2行目、3行目へとアクセスして行く
+}
+fclose($handle);
+
+$total = array_sum($scores);
+echo $total .PHP_EOL;
+?>
+
