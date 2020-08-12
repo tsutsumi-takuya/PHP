@@ -34,3 +34,37 @@ $array = file($file, FILE_IGNORE_NEW_LINES);	// FILE_IGNORE_NEW_LINES定数を�
 print_r($array);
 ?>
 
+<?php
+$dir = "hello";
+mkdir($dir); // mkdir関数 => ディレクトリを作成する(make directory)
+?>
+
+<?php
+$file = "hello.txt";
+$handle = fopen($file, "r");	// fopen関数 => ファイルを開く関数 ※ "r"は読み込み
+
+$line = fgets($handle);			// fgets関数 => ファイルポインタから1行目のデータを読み込む
+echo $line;
+
+fclose($handle);				// fclose関数 => ファイルポインタを削除してくれる
+?>
+
+<?php
+$file = "hello.txt";
+$handle = fopen($file, "r");
+while (($line = fgets($handle)) !== false) { // $fileをfalseになるまで表示させる
+	echo $line;
+}
+fclose($handle);
+?>
+
+<?php
+$names = ["Andy","Betty"];
+$file = "names.txt";
+$handle = fopen($file, "w"); // fopen関数 => ファイルを開く関数 ※ "w"は書き込みモード
+for ($i = 0; $i < count($names); $i++) {
+	fwrite($handle, $names[$i] .PHP_EOL);
+}
+fclose($handle);
+?>
+
