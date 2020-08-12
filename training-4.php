@@ -86,3 +86,52 @@ $sum = array_sum($array);	// array_sum関数 => 配列の要素数の合計を�
 echo $sum;
 ?>
 
+<?php
+$array = ["Andy","Betty","Carol"];
+$sliced_array = array_slice($array, 1);	// array_slice関数(対象の配列,開始) => 配列の一部を展開する関数
+print_r($sliced_array);
+?>
+
+<?php
+$array = ["Andy","Betty","Carol"];
+$sliced_array = array_slice($array, 1, 1);	// array_slice関数(対象の配列,開始,取得する要素数) => 配列の一部を展開する関数
+print_r($sliced_array);
+?>
+
+<?php
+$array = ["Betty","Carol","Andy"];
+sort($array);	// sort関数 => アルファベット順に配列を並び替えてくれる関数(成功した場合はtrue,失敗した場合はfalse)
+print_r($array);
+?>
+
+<?php
+$scores = [90,72,58,80];
+$sum = array_sum($scores);
+echo $sum .PHP_EOL;
+?>
+
+<?php
+$scores = [
+	"English" => [90,72,58],
+	"Math" => [80,82,78],
+	"Science" => [94,66,80]
+];
+foreach ($scores as $key => $value) {
+	$sum = array_sum($value);
+	echo $key . ":" . $sum .PHP_EOL;
+}
+?>
+
+<?php
+$names = ["Carol","Andy","Betty","Daniel"];
+sort($names);	// ["Andy","Betty","Carol","Daniel"]
+$done = array_reverse($names);
+var_dump($done);
+?>
+
+<?php
+$names = ["Carol","Andy","Betty","Daniel"];
+rsort($names);	// rsort関数 => sort関数を実行し尚且つ、array_reverse関数も付与する関数
+var_dump($names);
+?>
+
