@@ -99,3 +99,52 @@ $total = array_sum($scores);
 echo $total .PHP_EOL;
 ?>
 
+<?php
+$scores = [
+	[90,88,80],
+	[64,72,72,],
+	[90,92,94]
+];
+$file = "score.csv";
+$handle = fopen($file, "w");
+for ($i = 0; $i < count($scores); $i++) {
+	$score = $scores[$i];
+	fputcsv($handle, $score); // fput関数 => CSVデータをimplode関数で変換する必要がなくなる
+	// $line = implode(",", $score);
+	// fwrite($handle, $line .PHP_EOL);
+}
+fclose($handle);
+?>
+
+<?php
+$file = "score.csv";
+$handle = fopen($file, "r");
+# fgets($handle);
+$scores = [];
+$line = fgetcsv($handle); // fgets関数とexplode関数の処理をまとめて行う関数
+while ($line !== false) {
+	$scores[] = $line;
+	$line =fgetcsv($handle);
+}
+fclose($handle);
+
+// $lines = file($file, FILE_IGNORE_NEW_LINES);
+// $scores = [];
+
+// for ($i = 0; $i < count($lines); $i++) {
+// 	$line = $lines[$i];
+// 	$score = explode(",", $line);
+// 	$scores[] = $score;
+// }
+
+$total = 0;
+for ($i = 0; $i < count($scores); $i++) {
+	$score = $scores[$i];
+	for ($j = 0; $j < count($score); $j++) {
+		$total = $total + $score[$j];
+	}
+}
+echo $total;
+
+?>
+
