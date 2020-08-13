@@ -201,3 +201,58 @@ function good(){
 good();
 ?>
 
+<?php
+function double($x){
+	return $x * 2;
+}
+
+$scores = [90,72,58];
+
+for ($i = 0; $i < count($scores); $i++) {
+	$score = $scores[$i];
+	echo double($score) .PHP_EOL;
+}
+?>
+
+<?php
+
+// function repeat($str, $count){
+// 	$result = "";
+// 	for ($i = 0; $i < $count; $i++) {
+// 		$result = $result . $str;
+// 	}
+// 	return $result;
+// }
+
+#str_repeat関数の使用
+
+
+$hello2 = str_repeat("Hello ", 2);
+echo $hello2 .PHP_EOL;
+
+$world3 = str_repeat("World ", 3);
+echo $world3 .PHP_EOL;
+?>
+
+<?php
+function search($scores, $target){ // 引数が同じでも大丈夫
+	for ($i = 0; $i < count($scores); $i++) {
+		$score = $scores[$i];
+		if ($score === $target) { // "===" データ型が異なる為、"=="
+			return true;
+		}
+	}
+	return false;
+}
+
+$scores =[90,72,58,80,66,50];
+$target = (int)$argv[1]; // 文字列を整数型に変換
+
+$found = search($scores, $target);
+if ($found === true) {
+	echo "Found" .PHP_EOL;
+} else {
+	echo "Not Found" .PHP_EOL;
+}
+?>
+
