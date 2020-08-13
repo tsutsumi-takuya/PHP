@@ -144,7 +144,60 @@ for ($i = 0; $i < count($scores); $i++) {
 		$total = $total + $score[$j];
 	}
 }
-echo $total;
+echo $total .PHP_EOL;
 
+?>
+
+<?php
+function calc($price){ // ユーザー定義関数 => function 関数名(引数,引数)
+	$result = $price * 1.08;
+	return $result;    // 戻り値
+}
+
+$price1 = calc(100);
+echo $price1 .PHP_EOL;
+
+$price2 = calc(1000);
+echo $price2 .PHP_EOL;
+?>
+
+<?php
+function sum($x, $y, $z){ // sum関数で引数を3つ指定
+	return $x + $y + $z;  // 計算を行いreturnで戻り値を返す
+}
+
+$result = sum(100,200,300); // sum関数で引数を3つ指定しているので、3つ代入
+echo $result .PHP_EOL;
+?>
+
+<?php
+function hello(){ // hello関数 => 引数を取らないタイプの関数
+	return "Hello";
+}
+$result = hello();
+echo $result .PHP_EOL;
+?>
+
+<?php
+function greet($name){ // 引数を1つ指定
+	return "Hello $name" .PHP_EOL;
+}
+
+$message = greet("Andy"); // 引数"Andy"の代入
+echo $message;
+?>
+
+<?php
+function hi($name){
+	echo "Hello $name" .PHP_EOL; // 戻り値のない関数
+}
+hi("Betty");
+?>
+
+<?php
+function good(){
+	echo "Hello" .PHP_EOL; // 戻り値も引数もない関数
+}
+good();
 ?>
 
