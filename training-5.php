@@ -238,7 +238,7 @@ echo $world3 .PHP_EOL;
 function search($scores, $target){ // 引数が同じでも大丈夫
 	for ($i = 0; $i < count($scores); $i++) {
 		$score = $scores[$i];
-		if ($score === $target) { // "===" データ型が異なる為、"=="
+		if ($score === $target) {
 			return true;
 		}
 	}
