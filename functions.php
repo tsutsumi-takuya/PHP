@@ -9,8 +9,7 @@ define("MESSAGE_TASK_EMPTY", "タスクが未入力です");
 define("MESSAGE_TASK_MAX_LENGTH", "タスクが140文字を超えています。");
 define("MESSAGE_ID_INVALID", "入力されたIDは不明です。");
 
-function read_todo_list($ingres_closed = true){
-
+function read_todo_list($ingres_closed = true) {
 	$handle = fopen(TODO_LIST_CSV, "r");
 	$todo_list = [];
 	while ($todo = fgetcsv($handle)) {
@@ -23,3 +22,22 @@ function read_todo_list($ingres_closed = true){
 	return $todo_list;
 }
 
+function get_new_to_do_list() {
+	return count(read_todo_list()) + 1;
+}
+
+function add_todo_list($todo) {
+	$handle = fopen(TODO_LIST_CSV, "a");
+	fputcsv($handle, $todo);
+	fclose($handle);
+}
+
+function write_todo_list($todo_list) {
+	$handle = fopen(TODO_LIST_CSV, "w");
+	foreach ($todo_list as $todo) {
+		fputcsv($handle, $todo);
+	}
+	fclose($handle);
+}
+
+?>
