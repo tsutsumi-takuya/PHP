@@ -1,13 +1,13 @@
 <?php
 
-define("STATUS_OPENDED", "0");
-define("STATUS_CLOSED", "1");
+define("STATUS_OPENDED", "0"); // 定数の定義(完了)
+define("STATUS_CLOSED", "1");  // 定数の定義(未完了)
 define("TODO_LIST_CSV", "todo_list.csv");
 
 define("TASK_MAX_LENGTH", 140);
-define("MESSAGE_TASK_EMPTY", "タスクが未入力です");
-define("MESSAGE_TASK_MAX_LENGTH", "タスクが140文字を超えています。");
-define("MESSAGE_ID_INVALID", "入力されたIDは不明です。");
+define("MESSAGE_TASK_EMPTY", "タスクが未入力です");	// 文字数の上限設定
+define("MESSAGE_TASK_MAX_LENGTH", "タスクが140文字を超えています。");	// エラーメッセージ
+define("MESSAGE_ID_INVALID", "入力されたIDは不明です。");	// エラーメッセージ
 
 function read_todo_list($ingres_closed = true) {
 	$handle = fopen(TODO_LIST_CSV, "r");
@@ -22,7 +22,7 @@ function read_todo_list($ingres_closed = true) {
 	return $todo_list;
 }
 
-function get_new_to_do_list() {
+function get_new_to_do_id() {
 	return count(read_todo_list()) + 1;
 }
 
