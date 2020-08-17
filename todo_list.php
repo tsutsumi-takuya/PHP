@@ -1,3 +1,11 @@
-1,部屋を片付ける,"2019-10-01 11:00:00",1
-2,PHPの本を買いに行く,"2019-10-01 12:00:00",0
-3,PHPを勉強する"2019-10-01 11:00:00",0
+<?php
+require_once("functions.php"); // require_once関数 => 異なるPHPファイルを読み込む関数
+
+$todo_list = read_todo_list(false);
+
+for ($i = 0; $i < count($todo_list); $i ++) {
+	$todo = $todo_list[$i];
+	echo $todo[0] . ":" . $todo[1] . "(" . $todo[2] . ")" . PHP_EOL;
+}
+
+?>
