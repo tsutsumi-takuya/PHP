@@ -1,5 +1,5 @@
 <?php
-$name = ["Andy","Betty","Carol"];
+$name = file("names.txt", FILE_IGNORE_NEW_LINES);
 $date = date("Y-m-d H:i:s");
 ?>
 
