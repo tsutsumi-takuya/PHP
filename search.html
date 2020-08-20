@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>PHP sample</title>
+</head>
+<body>
+	<h3>Search</h3>
+	<hr>
+	<form action="search.php" method="get">
+		<input type="text" name="name">
+		<input type="submit" value="search">
+	</form>
+
+	<a href="search.php?name=a">Search: a</a> <!-- 含まれる文字の指定を行いリンク設定　※この場合"a"が含まれる名前 -->
+	<a href="search.php?name=t">Search: t</a> <!-- 含まれる文字の指定を行いリンク設定　※この場合"t"が含まれる名前 -->
+
+</body>
+</html>
