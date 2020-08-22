@@ -1,5 +1,17 @@
 <?php
-$name = $_GET["name"];
+
+// $name = null;
+// if (!isset($_GET["name"])) { // キーが存在しない場合に発火
+// 	$name = null;
+// } else if (!is_string($_GET["name"])) { // is_string関数 => 文字列データか確認
+// 	$name = false;
+// } else {
+// 	$name = $_GET["name"];
+// }
+
+// $name = $_GET["name"];
+$name = (string)filter_input(INPUT_GET, "name");
+
 $names = file("names.txt", FILE_IGNORE_NEW_LINES);
 $searched_names = [];
 

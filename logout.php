@@ -13,3 +13,4 @@ if (ini_get("session.use_cookies")) { //ini_get関数 => session内でCookieを�
 session_destroy(); // session_destroy関数 => ログアウトした場合、紐付けの解除(Cookieは残る)
 header("Location: login.html");
 ?>
+
