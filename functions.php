@@ -9,11 +9,11 @@ define("MESSAGE_TASK_EMPTY", "タスクが未入力です。");
 define("MESSAGE_TASK_MAX_LENGTH", "タスクが140文字を超えています。");
 define("MESSAGE_ID_INVALID", "入力されたIDは不正です。");
 
-// Add 2019.11.21
-if(0 === strpos(PHP_OS, 'WIN')) {
-  // adjust fgetcsv locale for Windows PHP7
-  setlocale(LC_CTYPE, 'C');
-}
+// // Add 2019.11.21
+// if(0 === strpos(PHP_OS, 'WIN')) {
+//   // adjust fgetcsv locale for Windows PHP7
+//   setlocale(LC_CTYPE, 'C');
+// }
 
 function read_todo_list($include_closed = true)
 {
@@ -60,7 +60,7 @@ function redirect($page)
 function redirect_with_message($page, $message)
 {
     if (empty($message)) {
-        redirect $page;
+        redirect($page);
     }
     $message = urldecode($message);
     header("Location: ". $page. "?message=${message}");
