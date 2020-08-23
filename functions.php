@@ -2,6 +2,7 @@
 define("STATUS_OPENED", "0");
 define("STATUS_CLOSED", "1");
 define("TODO_LIST_CSV", "todo_list.csv");
+define("TODO_LIST_CSV_LOCK", "todo_list.csv.lock");
 
 define("TASK_MAX_LENGTH", 140);
 define("MESSAGE_TASK_EMPTY", "タスクが未入力です。");
@@ -50,4 +51,41 @@ function write_todo_list($todo_list)
     fclose($handle);
 }
 
+function redirect($page)
+{
+    header("Location: ". $page);
+    exit();
+}
+
+function redirect_with_message($page, $message)
+{
+    if (empty($message)) {
+        redirect $page;
+    }
+    $message = urldecode($message);
+    header("Location: ". $page. "?message=${message}");
+    exit();
+}
+
+function get_message()
+{
+    $message = (string)filter_input(INPUT_GET, "message");
+    if ($message === MESSAGE_TASK_EMPTY || MESSAGE_TASK_MAX_LENGTH || MESSAGE_ID_INVALID ) {
+        return $message;
+    }
+    return "";
+}
+
+function lock_file($operation = LOCK_EX)
+{
+    $handle = fopen(TODO_LIST_CSV, "a");
+    flock($handle, $operation);
+    return $handle;
+}
+
+function unlock_file($handle)
+{
+    flock($handle, LOCK_UN);
+    fclose($handle);
+}
 ?>
