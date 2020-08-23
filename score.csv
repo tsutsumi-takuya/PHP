@@ -9,3 +9,4 @@ Science,Betty,88
 Science,Carol,67
 English,Andy,90
 Math,Dave,100
+Math,<script>alert('Danger!!')</script>,100

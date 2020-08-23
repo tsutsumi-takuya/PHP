@@ -42,9 +42,9 @@ fclose($fp);
 		<?php for ($i = 0; $i < count($score); $i++) { ?>
 
 		<tr>
-			<td><?php echo $score[$i][0]; ?></td>
-			<td><?php echo $score[$i][1]; ?></td>
-			<td><?php echo $score[$i][2]; ?></td>
+			<td><?php echo htmlspecialchars($score[$i][0]); ?></td>
+			<td><?php echo htmlspecialchars($score[$i][1]); ?></td>
+			<td><?php echo htmlspecialchars($score[$i][2]); ?></td>
 		</tr>
 		<?php } ?>
 	</table>
