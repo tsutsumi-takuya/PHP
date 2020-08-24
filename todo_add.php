@@ -28,7 +28,8 @@ $lock_handle = lock_file();
 // }
 
 $id = get_new_todo_id();
-$date = date('Y-m-d H:i:s');
+date_default_timezone_set('Asia/Tokyo'); // 日本時間での設定
+$date = date("Y/m/d H:i");
 $status = STATUS_OPENED;
 $todo = [$id, $task, $date, $status];
 
